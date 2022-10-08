@@ -22,7 +22,7 @@ async function handleSignin(req, res, next) {
       user: req.user,
       token: req.user.token
     };
-    res.status(200).json(user);
+    res.status(201).json(user);
   } catch (e) {
     console.error(e);
     next(e);
@@ -48,5 +48,5 @@ module.exports = {
   handleSignup,
   handleSignin,
   handleGetUsers,
-  handleSecret
-}
+  handleSecret,
+};
